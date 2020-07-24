@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "3f7QvKCdbLm7EKk2jND1M9SKqToh+ygF0KJxCwxYhFCK8C4E4/d0KXutJglzZvNP7XUkIZaqB1S/s1sWo1MO1A==",
+  "dgSpecHash": "QOtwY+8N98BYazh70tc7ZVQrJ7Y5MUUpkvVeppk7U/hxt48x2Z535psSLpYazCkVFbeTsWg1CLgrkFQGOnLfwA==",
   "success": true,
   "projectFilePath": "D:\\AppMAS_Global\\PruebaMASGlobal\\backend\\API\\API.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

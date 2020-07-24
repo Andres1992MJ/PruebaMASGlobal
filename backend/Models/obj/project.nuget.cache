@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "CNySrLfisozQNsqWjF5aBZDH4R1E+dbUsIIpMN0tu6zfYepa0Gk+0Uld2MSaRS0Rqv3eFwKwIYp9XXfUms15tQ==",
+  "success": true,
+  "projectFilePath": "D:\\AppMAS_Global\\PruebaMASGlobal\\backend\\Models\\Models.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
