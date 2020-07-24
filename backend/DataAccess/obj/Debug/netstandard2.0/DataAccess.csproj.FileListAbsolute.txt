@@ -1,0 +1,12 @@
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\bin\Debug\netstandard2.0\Models.dll
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csprojAssemblyReference.cache
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfoInputs.cache
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.AssemblyInfo.cs
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\bin\Debug\netstandard2.0\DataAccess.deps.json
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\bin\Debug\netstandard2.0\DataAccess.dll
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\bin\Debug\netstandard2.0\DataAccess.pdb
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\bin\Debug\netstandard2.0\Models.pdb
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CoreCompileInputs.cache
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.csproj.CopyComplete
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.dll
+D:\AppMAS_Global\PruebaMASGlobal\backend\DataAccess\obj\Debug\netstandard2.0\DataAccess.pdb
