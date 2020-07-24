@@ -1,11 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "mK9RGkcGvLTEwVCbBxrfbHaEk3rZrbOODbIZJOJGGKDDwb0r3mvOUuXOuq5XpM4DJ4Z7LlOfohtf78KN4tcg8g==",
+  "dgSpecHash": "Av/RzP6BqI3kWZMUbRGk6i8uCeuG7xJdZq9yhre0IXLDqaZJCihm38cD3zqZmdY3oX/xAFjIz3EDpX6KCtZ1gw==",
   "success": true,
   "projectFilePath": "D:\\AppMAS_Global\\PruebaMASGlobal\\backend\\BusinessLogic\\BusinessLogic.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.6\\microsoft.extensions.configuration.abstractions.3.1.6.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.6\\microsoft.extensions.primitives.3.1.6.nupkg.sha512",
     "C:\\Users\\Andres Medina\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Andres Medina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\system.memory\\4.5.2\\system.memory.4.5.2.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\Andres Medina\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.1\\system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
   ],
   "logs": []
 }

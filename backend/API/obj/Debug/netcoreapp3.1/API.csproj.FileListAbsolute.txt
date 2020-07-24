@@ -26,3 +26,5 @@ D:\AppMAS_Global\PruebaMASGlobal\backend\API\obj\Debug\netcoreapp3.1\staticwebas
 D:\AppMAS_Global\PruebaMASGlobal\backend\API\obj\Debug\netcoreapp3.1\API.dll
 D:\AppMAS_Global\PruebaMASGlobal\backend\API\obj\Debug\netcoreapp3.1\API.pdb
 D:\AppMAS_Global\PruebaMASGlobal\backend\API\obj\Debug\netcoreapp3.1\API.genruntimeconfig.cache
+D:\AppMAS_Global\PruebaMASGlobal\backend\API\bin\Debug\netcoreapp3.1\BusinessLogic.dll
+D:\AppMAS_Global\PruebaMASGlobal\backend\API\bin\Debug\netcoreapp3.1\BusinessLogic.pdb
