@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.EmployeeRepositoy
 {
-    public class EmployeeRepository
+    public class EmployeeRepository : IEmployeeRepository
     {
         private readonly IConfiguration _configuration;
 
