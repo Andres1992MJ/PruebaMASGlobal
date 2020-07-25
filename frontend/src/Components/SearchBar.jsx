@@ -3,7 +3,6 @@ import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Button from "@material-ui/core/Button";
 import SearchIcon from "@material-ui/icons/Search";
-
 import TextField from "@material-ui/core/TextField";
 import { withRouter } from "react-router";
 
@@ -30,7 +29,7 @@ function SearchBar(props) {
   const classes = useStyles();
   const tableBtn = (e) => {
     e.preventDefault();
-    const localUrl = id ? `/table/${id}` : "/table";
+    const localUrl = id ? `/employee/${id}` : "/employees";
     props.history.push(localUrl);
   };
   const [id, setId] = useState();

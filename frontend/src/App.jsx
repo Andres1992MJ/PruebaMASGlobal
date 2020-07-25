@@ -1,7 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import StaticTemplate from "./Templates/StaticComp";
-import Table from "./Components/Table";
+import Employees from "./Components/Employees";
+import Employee from "./Components/Employee";
+
 
 function Home() {
   return (
@@ -18,11 +20,11 @@ function App() {
         <div>
           <StaticTemplate />
           <Switch>
-            <Route path="/table/:id">
-              <Table />
+            <Route path="/employee/:id">
+              <Employee />
             </Route>
-            <Route path="/table">
-              <Table />
+            <Route path="/employees">
+              <Employees />
             </Route>
 
             <Route path="/">

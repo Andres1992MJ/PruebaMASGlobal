@@ -30,6 +30,14 @@ namespace API.Controllers
             return Ok(responsePackage);
         }
 
+        [HttpGet]
+        [Route("GetEmployeeById")]
+        public async Task<IActionResult> GetEmployeeById([FromQuery(Name = "id")] int id)
+        {
+
+            var responsePackage = await _employeeService.GetEmployeeByIdAsync(id);
+            return Ok(responsePackage);
+        }
     }
 
 
