@@ -2,6 +2,7 @@
 using DataAccess.EmployeeRepositoy;
 using Models;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace BusinessLogic.EmployeeService
@@ -43,11 +44,12 @@ namespace BusinessLogic.EmployeeService
             return employeesDto;
         }
 
-        //public async Task<Employee> GetEmployeeById(int id)
-        //{
-        //    var employees = await GetEmployeesAsync();
-        //    return employees.FirstOrDefault(e => e.Id == id);
-        //}
+        public async Task<EmployeeDto> GetEmployeeByIdAsync(int id)
+        {
+
+            var employees = await GetEmployeesAsync();
+            return employees.FirstOrDefault(e => e.Id == id);
+        }
 
 
     }

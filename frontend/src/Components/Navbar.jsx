@@ -30,7 +30,8 @@ const Navbar = (props) => {
 
   return (
     <React.Fragment>
-      <AppBar position="fixed" color="primary">
+      {/* </React.Fragment><AppBar position="fixed" color="primary"> */}
+      <AppBar position="fixed" style={{backgroundColor:"#ffb74d"}}>
         <Toolbar>
           <Typography variant="h6">MAS Global</Typography>
 
