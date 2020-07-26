@@ -1,31 +1,35 @@
 import React, { useState, useEffect } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Alert} from '@material-ui/lab';
-
+import { Alert } from "@material-ui/lab";
+import Avatar from "@material-ui/core/Avatar";
 import { useParams } from "react-router-dom";
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
-import Typography from '@material-ui/core/Typography';
+import Card from "@material-ui/core/Card";
+import CardActionArea from "@material-ui/core/CardActionArea";
+import CardContent from "@material-ui/core/CardContent";
+import Typography from "@material-ui/core/Typography";
+import DraggableDialog from "./Alert"
 
 const useStyles = makeStyles({
-  tables: {
-    minWidth: 650,
-  },
   root: {
     maxWidth: 345,
+    margin: "auto",
+    marginTop: "2%",
+    paddingTop: "1%",
+    backgroundColor: "#84a9ac",
   },
-  media: {
-    height: 140,
+  large: {
+    width: 200,
+    height: 200,
+    margin: "auto",
   },
 });
-
-
-
 function EmployeeCard() {
 
+  const formatter = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits:2
+  })
   
   const [employee, setEmployee] = useState({});
 
@@ -34,25 +38,21 @@ function EmployeeCard() {
   const [statusText, setStatusText] = useState("");
 
   useEffect(() => {
-  
+    const url = `http://localhost:53337/api/Employee/GetEmployeeById?id=${id}`;
 
-    const url =`http://localhost:53337/api/Employee/GetEmployeeById?id=${id}`
-      
     fetch(url)
       .then(function (response) {
         if (response.ok) {
           console.log("response", response);
           setStatusText(response.statusText);
-          if(response.statusText==="OK"){
-            response.json().then((json) => { 
-              console.log("json ", json);        
+          if (response.statusText === "OK") {
+            response.json().then((json) => {
+              console.log("json ", json);
               setEmployee(json);
-              
             });
-          }else{
-            alert("Usuario no existe")
+          } else {
+            DraggableDialog();
           }
-         
         }
       })
       .catch(function (error) {
@@ -61,56 +61,54 @@ function EmployeeCard() {
   }, [id]);
 
   const classes = useStyles();
-  return (
-    (statusText==="OK")?
+  return statusText === "OK" ? (
     <Card className={classes.root}>
-    <CardActionArea>
-      <CardMedia
-        className={classes.media}
-        image="/static/images/cards/contemplative-reptile.jpg"
-        title="Contemplative Reptile"
-      />
-      <CardContent>
-        <Typography gutterBottom variant="h5" component="h2">
-        Name: {employee.name}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Contract type: {employee.contractTypeName}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Role Id: {employee.roleId}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Role Name: {employee.roleName}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Role Description: {employee.roleDescription}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Hourly Salary: {employee.hourlySalary}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Monthly Salary: {employee.monthlySalary}
-        </Typography>
-        <Typography variant="body2" color="textSecondary" component="p">
-         Annual Salary: {employee.annualSalary}
-        </Typography>
-      </CardContent>
-    </CardActionArea>
-    {/* <CardActions>
-      <Button size="small" color="primary">
-        Share
-      </Button>
-      <Button size="small" color="primary">
-        Learn More
-      </Button>
-    </CardActions> */}
-  </Card>:
-  <Alert severity="warning">User Not Found</Alert>
-  
-
-      
+      <CardActionArea>
+       <Avatar
+          alt="Remy Sharp"
+          src={require("../img/default-avatar.jpg")}
+          className={classes.large}
+        />
+        <CardContent style={{ color: "black" }}>
+          <Typography gutterBottom variant="h5" component="h1">
+            <b>Name:</b> {employee.name}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b>Contract type:</b> {employee.contractTypeName}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b>Role Id:</b> {employee.roleId}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b>Role Name:</b> {employee.roleName}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b> Role Description:</b> {employee.roleDescription}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b>Hourly Salary:</b> {formatter.format(employee.hourlySalary)}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b> Monthly Salary:</b> {formatter.format(employee.monthlySalary)}
+          </Typography>
+          <Typography variant="body2" component="p">
+          <b>Annual Salary:</b> {formatter.format(employee.annualSalary)}
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+    </Card>
+  ) : (
+    <div>
+    <DraggableDialog/>
+    <Alert
+      severity="warning"
+      style={{ margin: "auto", marginTop: "5%", maxWidth: "400px" }}
+    >
+      User Not Found
+    </Alert>
+    </div>
   );
 }
+
 
 export default EmployeeCard;

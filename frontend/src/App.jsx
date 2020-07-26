@@ -3,21 +3,14 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import StaticTemplate from "./Templates/StaticComp";
 import Employees from "./Components/Employees";
 import Employee from "./Components/Employee";
-
-
-function Home() {
-  return (
-    <div>
-      <h1>HOLA HOME</h1>
-    </div>
-  );
-}
+import Home from "./Components/Home";
+import StickyFooter from "./Components/Footer";
 
 function App() {
   return (
-    <div>
-      <Router>
-        <div>
+    <React.Fragment>
+      <div style={{ backgroundColor: "#e4e3e3", minHeight: "100vh" }}>
+        <Router>
           <StaticTemplate />
           <Switch>
             <Route path="/employee/:id">
@@ -26,14 +19,14 @@ function App() {
             <Route path="/employees">
               <Employees />
             </Route>
-
             <Route path="/">
               <Home />
             </Route>
           </Switch>
-        </div>
-      </Router>
-    </div>
+        </Router>
+      </div>
+      <StickyFooter />
+    </React.Fragment>
   );
 }
 

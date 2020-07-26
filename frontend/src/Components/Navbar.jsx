@@ -5,10 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core";
 import Fab from "@material-ui/core/Fab";
 import HomeIcon from "@material-ui/icons/Home";
-import {
-  BrowserRouter as Router,
-  withRouter,
-} from "react-router-dom";
+import { BrowserRouter as Router, withRouter } from "react-router-dom";
 
 const useStyle = makeStyles((theme) => ({
   offset: {
@@ -30,15 +27,14 @@ const Navbar = (props) => {
 
   return (
     <React.Fragment>
-      {/* </React.Fragment><AppBar position="fixed" color="primary"> */}
-      <AppBar position="fixed" style={{backgroundColor:"#ffb74d"}}>
+      <AppBar position="fixed" style={{ backgroundColor: "#204051" }}>
         <Toolbar>
-          <Typography variant="h6">MAS Global</Typography>
+          <Typography variant="h5">MAS Global</Typography>
 
           <Fab
             variant="extended"
-            size="small"
-            color="primary"
+            size="medium"
+            style={{ backgroundColor: "#3b6978" }}
             aria-label="add"
             className={classes.bottom}
             onClick={homeBtn}

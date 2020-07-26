@@ -11,10 +11,17 @@ import Paper from "@material-ui/core/Paper";
 const useStyles = makeStyles({
   tables: {
     minWidth: 650,
+    margin: "auto",
   },
 });
 
 function TableEmployees() {
+
+  const formatter = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+    minimumFractionDigits:2
+  })
   const [employees, setEmployees] = useState([]);
 
   useEffect(() => {
@@ -34,18 +41,18 @@ function TableEmployees() {
 
   const classes = useStyles();
   return (
-    <TableContainer component={Paper}>
+    <TableContainer component={Paper} style={{backgroundColor:"#e4e3e3", maxWidth:"70%", margin:"auto"}}>
       <Table className={classes.tables} aria-label="simple table">
         <TableHead>
-          <TableRow>
-            <TableCell>name</TableCell>
-            <TableCell align="right">contractTypeName</TableCell>
-            <TableCell align="right">roleId</TableCell>
-            <TableCell align="right">roleName</TableCell>
-            <TableCell align="right">roleDescription</TableCell>
-            <TableCell align="right">hourlySalary</TableCell>
-            <TableCell align="right">monthlySalary</TableCell>
-            <TableCell align="right">annualSalary</TableCell>
+          <TableRow style={{backgroundColor:"#84a9ac",minHeight:"100%"}}>
+            <TableCell>Name</TableCell>
+            <TableCell align="right">Contract TypeName</TableCell>
+            <TableCell align="right">Role Id</TableCell>
+            <TableCell align="right">Role Name</TableCell>
+            <TableCell align="right">Role Description</TableCell>
+            <TableCell align="right">Hourly Salary</TableCell>
+            <TableCell align="right">Monthly Salary</TableCell>
+            <TableCell align="right">Annual Salary</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -59,9 +66,9 @@ function TableEmployees() {
                 <TableCell align="right">{row.roleId}</TableCell>
                 <TableCell align="right">{row.roleName}</TableCell>
                 <TableCell align="right">{row.roleDescription}</TableCell>
-                <TableCell align="right">{row.hourlySalary}</TableCell>
-                <TableCell align="right">{row.monthlySalary}</TableCell>
-                <TableCell align="right">{row.annualSalary}</TableCell>
+                <TableCell align="right">{formatter.format(row.hourlySalary)}</TableCell>
+                <TableCell align="right">{formatter.format(row.monthlySalary)}</TableCell>
+                <TableCell align="right">{formatter.format(row.annualSalary)}</TableCell>
               </TableRow>
             ))}
         </TableBody>
